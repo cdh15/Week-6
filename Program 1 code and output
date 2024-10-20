@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Main
+{
+    static Scanner userInput = new Scanner(System.in);
+    public static void main(String[] args) throws InterruptedException
+    {
+        System.out.print("What is your first name?: ");
+        String firstName = userInput.nextLine();
+        System.out.print("What is your middle name?: ");
+        String middleName = userInput.nextLine();
+        System.out.print("What is your last name?: ");
+        String lastName = userInput.nextLine();
+
+        StringBuilder fullName = new StringBuilder(firstName).append(" ").append(middleName).append(" ").append(lastName);
+        String name = fullName.toString();
+
+        Thread.sleep(750);
+
+        System.out.printf("Your full name is %s", fullName);
+    }
+}
+
+Output
+
+What is your first name?: Caleb
+What is your middle name?: Daniel
+What is your last name?: Harding
+Your full name is Caleb Daniel Harding
